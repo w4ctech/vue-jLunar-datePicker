@@ -43,47 +43,49 @@ test.vue
 
 ```vue
 <template>
-    <j-date-picker v-model="value1"
-         :width="width1"
-         :placeholder="placeholder"
-         :picker-options="pickerOptions"
-         :rangeSeparator="rangeSeparator"
-         @change="onDateChange"
-         :disabled="disabled"
-         :showLunarClass="showLunarClass"
-         :showLunarControl="showLunarControl"
-         :type="type"
-         :showBackYears="showBackYears"
-         :showLunarIcon="showLunarIcon"
-         :format="format">
-    </j-date-picker>
+  <j-date-picker
+    v-model="value1"
+    :width="width1"
+    :placeholder="placeholder"
+    :picker-options="pickerOptions"
+    :rangeSeparator="rangeSeparator"
+    @change="onDateChange"
+    :disabled="disabled"
+    :showLunarClass="showLunarClass"
+    :showLunarControl="showLunarControl"
+    :type="type"
+    :showBackYears="showBackYears"
+    :showLunarIcon="showLunarIcon"
+    :format="format"
+  ></j-date-picker>
 </template>
 <script>
-export default{
-  data(){
-    return{
-      data:{
-        value1:'',
-        type:'DATE',
-        showLunarClass:'MIX',
-        showBackYears:2,
-        showLunarIcon:true,
-        showLunarControl:true,
-        width1:'300',
-        format:'YYYY.MM.DD',
-        placeholder:'please input something ...',
-        rangeSeparator:'-',
-        disabled:false,
-        editable:true,
-        clearable:true,
+export default {
+  data() {
+    return {
+      data: {
+        value1: "",
+        type: "DATE",
+        showLunarClass: "MIX",
+        showBackYears: 2,
+        showLunarIcon: true,
+        showLunarControl: true,
+        width1: "300",
+        format: "YYYY.MM.DD",
+        placeholder: "please input something ...",
+        rangeSeparator: "-",
+        disabled: false,
+        editable: true,
+        clearable: true,
         pickerOptions: {
-          disabledDate (time) {
+          disabledDate(time) {
             return time.getTime() < Date.now() - 8.64e7;
           }
+        }
       }
-    }
+    };
   }
-}
+};
 </script>
 ```
 
